@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网站验证</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background: #000000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+    
+    .content {
+        text-align: center;
+    }
+
+    button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+
+    #btn-left {
+        background-color: yellow;
+    }
+
+    #btn-right {
+        background-color: yellow;
+    }
+</style>
+</head>
+<body>
+<div class="content">
+    <img src="mywebsite.png" alt="我的网站" style="width: 300px; margin-top: -20px;">
+    <h1>本网站含有柳州市十五中23级12班专属内容，请进行验证</h1>
+    <button id="btn-left" onclick="verify('left')">我是12班的同学</button>
+    <button id="btn-right" onclick="verify('right')">我不是12班的同学</button>
+</div>
+
+<script>
+    function verify(choice) {
+        if (choice === 'left') {
+            alert('验证成功！欢迎访问本网站！');
+            // 跳转到 index2.html
+            window.location.href = 'index2.html';
+        } else {
+            alert('验证失败！您无权访问本网站！');
+            // 这里可以加上其他处理方式，比如退出网站
+        }
+    }
+</script>
+</body>
+</html>
